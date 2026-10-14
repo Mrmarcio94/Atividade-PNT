@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Feira do Porto</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <div id="div-h1">
@@ -15,8 +16,8 @@
       <label for="email"><b>Email</b></label>
       <input id="email" type="text" placeholder="seuemail@email.com" required>
       <label for="senha"><b>Senha</b></label>
-      <input id="senha" type="password" placeholder="Digite sua senha" required >
-      <button type="button"><a href="index.html"><b>Entrar</b></a></button>
+      <input id="senha" type="password" placeholder="Digite sua senha" min="8" required >
+      <button id="botaoLogin" type="submit"><b>Entrar</b></a></button>
     </form>
   </div>
   <main>
