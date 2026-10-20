@@ -35,3 +35,16 @@ CREATE TABLE item_pedido (
     FOREIGN KEY (pedido_id) REFERENCES pedido(id),
     FOREIGN KEY (produto_id) REFERENCES produto(id)
 );
+
+INSERT INTO cliente (nome, email, senha, telefone, endereco)
+VALUES ('Ana Souza', 'anasouza@gmail.com', 'anasouza123', '977778888', 'Rua da concha, 100'),
+('Carlos André', 'carlosandre@gmail.com','carlosandre321','966665555', 'Rua da castanha, 392'),
+('Maria Dolores', 'doloresmaria@gmail.com', 'doloresmaria000', '911119999', 'Rua do siri, 45');
+
+INSERT INTO produto (nome, preco)
+VALUES ('Maçã', 6.67),
+('Abacaxi',3.00),
+('Cebola',4.25),
+('Milho',3.46),
+('Camarão',25.00),
+('Salmão',89.99);

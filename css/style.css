@@ -310,6 +310,7 @@ footer {
     border-radius: 8px;
     padding: 20px;
     background-color: rgb(191, 227, 208);
+    text-align: start;
 }
 
 #form-login label {
@@ -495,5 +496,45 @@ figure {
     margin-top: 25px;
 }
 
+#div-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 77vh;   
+}
 
+#form-cadastro {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgb(191, 227, 208);
+}
 
+#form-cadastro label {
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+#form-cadastro input {
+    margin-bottom: 10px;
+    border-radius: 4px;
+    height: 25px;
+    width: 300px;
+}
+
+#form-cadastro a {
+    text-decoration: none;
+    color: #000;
+}
+
+#p-login {
+    font-size: small;
+    margin-top: 5px;
+}
+
+#p-login a {
+    color: blue;
+}
