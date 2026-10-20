@@ -21,6 +21,7 @@ CREATE TABLE pedido (
     id INT AUTO_INCREMENT PRIMARY KEY,
     cliente_id INT NOT NULL,
     data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
+    quantidade DECIMAL(10, 2) NOT NULL,
     status_pedido VARCHAR(50) DEFAULT 'Pendente',
     valor_total DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (cliente_id) REFERENCES cliente(id)
@@ -36,6 +37,7 @@ CREATE TABLE item_pedido (
     FOREIGN KEY (produto_id) REFERENCES produto(id)
 );
 
+
 INSERT INTO cliente (nome, email, senha, telefone, endereco)
 VALUES ('Ana Souza', 'anasouza@gmail.com', 'anasouza123', '977778888', 'Rua da concha, 100'),
 ('Carlos André', 'carlosandre@gmail.com','carlosandre321','966665555', 'Rua da castanha, 392'),
@@ -48,3 +50,20 @@ VALUES ('Maçã', 6.67),
 ('Milho',3.46),
 ('Camarão',25.00),
 ('Salmão',89.99);
+
+INSERT INTO pedido (cliente_id, quantidade, valor_total)
+VALUES (1, 3.50, 50.84);
+
+INSERT INTO item_pedido (pedido_id, produto_id, quantidade, preco_unitario)
+VALUES (1, 1, 2.00, 6.67),
+(1, 5, 1.50, 25.00);
+
+
+SELECT 
+    c.nome AS nome_cliente,
+    p.nome AS nome_produto,
+    ip.quantidade AS quantidade_produto
+FROM item_pedido ip 
+INNER JOIN pedido ped ON ip.pedido_id = ped.id
+INNER JOIN cliente c ON ped.cliente_id = c.id
+INNER JOIN produto p ON ip.produto_id = p.id;
