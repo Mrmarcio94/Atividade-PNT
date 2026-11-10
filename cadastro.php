@@ -2,6 +2,12 @@
 require_once 'includes/config.php';
 $erro = "";
 
+$nome = "";
+$telefone = "";
+$endereco = "";
+$email = "";
+
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $nome = $_POST['nome'];     
   $telefone = $_POST['telefone'];
@@ -43,13 +49,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <div id="div-cadastro">    
     <form id="form-cadastro" action="" method="post">
       <label for="nome"><b>Nome</b></label>
-      <input id="nome" type="text" name="nome" placeholder="Digite seu nome">
+      <input id="nome" type="text" name="nome" placeholder="Digite seu nome" value="<?= htmlspecialchars($nome, ENT_QUOTES, 'UTF-8') ?>" >
       <label for="telefone"><b>Telefone</b></label>
-      <input id="telefone" type="tel" name="telefone" placeholder="(81)9999-9999">
+      <input id="telefone" type="tel" name="telefone" placeholder="(81)9999-9999" value="<?= htmlspecialchars($telefone, ENT_QUOTES, 'UTF-8') ?>" >
       <label for="endereco"><b>Endereço</b></label>
-      <input id="endereco" type="text" name="endereco"  placeholder="Rua do Cajú, 136, Cajueiro, Recife-PE ">
+      <input id="endereco" type="text" name="endereco"  placeholder="Rua do Cajú, 136, Cajueiro, Recife-PE " value="<?= htmlspecialchars($endereco, ENT_QUOTES, 'UTF-8') ?>" >
       <label for="email"><b>Email</b></label>
-      <input id="email" type="email" name="email" placeholder="seuemail@email.com" required>
+      <input id="email" type="email" name="email" placeholder="seuemail@email.com" required value="<?= htmlspecialchars($email, ENT_QUOTES, 'UTF-8') ?>" >
       <label for="senha"><b>Senha</b></label>
       <input id="senha" type="password" name="senha" placeholder="Digite sua senha" minlength="8" required >
       <label for="repetir-senha"><b>Repetir senha</b></label>

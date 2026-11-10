@@ -27,17 +27,17 @@ botaoLogin.addEventListener('click', function(){
 // dinâmica da página de cadastro
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = getElementById('form-cadastro');
+    const form = document.getElementById('form-cadastro');
 
     form.addEventListener('submit', (event) => {
         const senha = document.getElementById('senha').value;
         const repetirSenha = document.getElementById('repetir-senha').value;
 
         if (senha !== repetirSenha) {
-            Event.preventDefault();
+            event.preventDefault();
             alert('As senhas não coincidem. Por favor, digite novamente.');
 
-            document.getElementById('repetir-senha').focus;
+            document.getElementById('repetir-senha').focus();
         }
 
 
