@@ -9,10 +9,10 @@ $email = "";
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $nome = $_POST['nome'];     
-  $telefone = $_POST['telefone'];
-  $endereco = $_POST['endereco'];
-  $email = $_POST['email'];
+  $nome = trim($_POST['nome']);     
+  $telefone = trim($_POST['telefone']);
+  $endereco = trim($_POST['endereco']);
+  $email = trim($_POST['email']);
   $senha = $_POST['senha'];
 
   $hash = password_hash($senha, PASSWORD_DEFAULT);
