@@ -4,7 +4,7 @@ require_once 'includes/config.php';
 $erro = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $stmt = $pdo->prepare("SELECT FROM cliente WHERE email = ?");
+  $stmt = $pdo->prepare("SELECT * FROM cliente WHERE email = ?");
   $stmt->execute([$_POST['email']]);
   $u = $stmt->fetch();
 
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_SESSION['usuario_telefone'] = $u['telefone'];
     $_SESSION['usuario_endereco'] = $u['endereco'];
     $_SESSION['usuario_email'] = $u['email'];
-    header("Location: index.html");
+    header("Location: index.php");
     exit;
   } else {
     $erro = "Email ou senha incorretos";
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <label for="senha"><b>Senha</b></label>
       <input id="senha" type="password" placeholder="Digite sua senha" minlength="8" name="senha" required >
       <button id="botaoLogin" type="submit"><b>Entrar</b></button>
-      <p id="p-login">Não tem cadastro?<a href="cadastro.html">Clique aqui!</a></p>
+      <p id="p-login">Não tem cadastro?<a href="cadastro.php">Clique aqui!</a></p>
     </form>
   </div>
   <main>

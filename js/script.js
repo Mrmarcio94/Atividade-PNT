@@ -17,11 +17,11 @@ formLogin.addEventListener('submit', function(evento) {
 
 
 
-const botaoLogin = document.getElementById('botaoLogin')
+//const botaoLogin = document.getElementById('botaoLogin')
 
-botaoLogin.addEventListener('click', function(){
-    alert('Bem-vindos à Feira do Porto!')
-} )
+//botaoLogin.addEventListener('click', function(){
+//    alert('Bem-vindos à Feira do Porto!')
+//} )
 
 
 // dinâmica da página de cadastro
