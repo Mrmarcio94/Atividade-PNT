@@ -1,5 +1,5 @@
 // script do formulário de login
-const formLogin = document.querySelector('#form-login')
+/*const formLogin = document.querySelector('#form-login')
 
 formLogin.addEventListener('submit', function(evento) {
     evento.preventDefault()
@@ -8,12 +8,12 @@ formLogin.addEventListener('submit', function(evento) {
     const senha = document.querySelector('#senha').value
 
     if (email.trim() !== "" && senha.trim() !== "") {
-        window.location.href = 'index.html'
+        window.location.href = 'index.php'
     } else {
         alert('Por favor, preencha o email e a senha')
     }
 
-} )
+} ) */
 
 
 
