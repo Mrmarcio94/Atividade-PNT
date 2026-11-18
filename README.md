@@ -17,3 +17,16 @@ Sistema web de pedidos de itens de pescados e hortifruti. O cliente faz o pedido
 3. No phpMyAdmin, importe `database/feira-do-porto.sql`.
 4. Acesse http://localhost/feira-do-porto
 Passos detalhados em `docs/instalacao.md`.
+
+## Usuário de teste
+- E-mail: aluno@teste.com
+- Senha: 123456
+## Documentação
+- Requisitos: `docs/requisitos.md`
+- Banco de dados: `docs/banco-de-dados.md`
+- Manual do usuário: `docs/manual-usuario.md`
+## Equipe
+- Márcio Rafael — back-end (PHP), banco de dados, front-end e documentação
+
+Projeto do curso técnico em Desenvolvimento de Sistemas —
+ETE Porto Digital, 2026.
